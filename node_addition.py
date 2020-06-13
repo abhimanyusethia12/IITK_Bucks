@@ -1,4 +1,4 @@
-from classes.py import block, transaction_class
+from classes import block, transaction_class
 
 
 #assuming a blockchain as a list of block objects
@@ -8,6 +8,7 @@ blockchain = []
 pending_trans = []
 #Flask server code
 from flask import Flask, jsonify, Request, make_response
+app = Flask(__name__)
 
 @app.route('/getBlock/<n>')
 def send_block(n):
