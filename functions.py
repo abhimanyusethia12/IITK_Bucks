@@ -155,7 +155,7 @@ from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.primitives import hashes
 from cryptography.exceptions import InvalidSignature
 
-def ver_sign(transaction_object,unused_output_dict):
+def ver_sign(transaction_object):
 
     array_of_inputs = transaction_object.array_of_inputs
     array_of_outputs = transaction_object.array_of_outputs
@@ -217,7 +217,7 @@ def ver_sign(transaction_object,unused_output_dict):
 
 #Verification Cond 3- It doesn't spend more coins than it is allowed to.
 
-def ver_output_less_than_input(transaction_object, unused_output_dict):
+def ver_output_less_than_input(transaction_object):
     input_coins = 0
     output_coins = 0
     for input in transaction_object.array_of_inputs:
@@ -233,7 +233,7 @@ def ver_output_less_than_input(transaction_object, unused_output_dict):
 
 
 #verifying a transaction (all three conditions)
-def verify_txn(transaction_object,unused_output_dict):
+def verify_txn(transaction_object):
     if ver_correct_input(transaction_object,unused_output_dict) and ver_output_less_than_input(transaction_object,unused_output_dict) and ver_sign(transaction_object,unused_output_dict):
         return True
     else:
