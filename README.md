@@ -13,7 +13,7 @@ The blockchain data will be stored in the following data structures as declared 
 * `unused_output_dict`: dict = dictionary consisting of {(transID,index_of_output):output_object}
 * `block_reward`: int = no of coins set as block reward
 
-## `classes.py` 
+## classes.py 
 
 Consists of the class definitions:
 
@@ -145,7 +145,7 @@ Format in which data is expected to be received is:
 }
 ```
 
-## `functions.py`
+## functions.py
 The following functions have been implemented in this script-
 
 * `find_peers()`
