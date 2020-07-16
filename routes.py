@@ -84,7 +84,7 @@ def send_peers():
     return jsonify(peers= peers)
 
 #new block
-@app.route('newBlock',methods=["POST"])
+@app.route('/newBlock',methods=["POST"])
 def add_new_block():
     new_block = block()
     binary_data = request.get_data()
