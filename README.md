@@ -1,19 +1,13 @@
 # IITK_Bucks
-I have developed a **fully-functional blockchain-based cryptocurrency node** and have also written a script for **terminal-based User interface** for the node. All scripts are written in Python and use Flask framework for server code. 
+I have developed a **fully-functional blockchain-based cryptocurrency node** and a **Command Line interface (CLI)** for users to interact with the node. 
 
-The node here, is consistent with (and has been tested with) a network of 15 nodes [(list of nodes here)](https://iitkbucks.pclub.in/), each using different languages (Javascript, Go, Java, Python) and different backend frameworks. 
+All scripts are written in Python and use Flask framework for server code. The node here, is consistent with (and has been tested with) a network of 15 nodes [(list of nodes here)](https://iitkbucks.pclub.in/), each using different languages (Javascript, Go, Java, Python) and different backend frameworks. 
 
-This README file has  two sections- Project Development Details and Technical Details
+This README file has the following two sections- Project Development Details and Technical Details
+You may jump to the Technical details sections by clicking [here](https://github.com/abhimanyusethia12/IITK_Bucks/blob/master/README.md#technical-details)
 
-# Project Details
-This Project was developed for the [Programming Club, IIT Kanpur](https://pclub.in), under @dryairship.
-## Project Timeline
-1. Assignments phase
-    In the first phase, we learn about blockchains and solved assignments to singularly implement different parts of the project.
-2. Project Building phase
-    In the second phase, we put together the various parts implemented at assignments into a main application.
-3. Deployment phase
-    One node of the project had been deployed on https://iitkbucks.pclub.in from 13th July 2020 till 26th July 2020. Through trying to communicate with that node, we found and eliminated the bugs in our applications. In this phase, we brought our programs to completion.
+# Project Development Details
+This Project was developed for the [Programming Club, IIT Kanpur](https://pclub.in) from April 2020 to July 2020.
 
 ## Learnings from the Project
 1. I learnt about an entire new domain of **cryptocurrency and blockchain**- got hands-on learning on how cryptocurrencies and blockchains work. Also, looked at other real-life applications of blockchain
@@ -30,16 +24,23 @@ This Project was developed for the [Programming Club, IIT Kanpur](https://pclub.
 4. **Developing Web-App based UI** - Currently, the frontend of the project is a Command Line Interface. However, it is not very user-friendly. A web-app would be much more handy for users.
 5. **Write code to preferentially include Transactions in Block for mining**- The Miner of my node, simply picks up as many transactions as it can (within the maximum block size) starting from index 0. However, in reality, the miners usually pick up transactions in the decreasing order of the transaction fee, so as to maximise earning from mining. Implementing such a function which preferentially includes transactions in a block would make the Miner closer to real-life.
 
+## Project Timeline
+1. Assignments phase- I implemented various parts of the full projects independently. The assignments repository can be found here- [abhimanyusethia12/IITKBucks_assignment](https://github.com/abhimanyusethia12/IITKBucks_assignment) 
+2. Project Building phase- I put together the various parts implemented at assignments into a main application.
+3. Deployment phase- One node of the project had been deployed on https://iitkbucks.pclub.in from 13th July 2020 till 26th July 2020. Through trying to communicate with that node, I found and eliminated the bugs in my applications. 
+
 # Technical Details
 The entire server code for the node is written in [`app.py`](./app.py). It consists of- 
-* endpoints of server
-* definition of various functions
-* global blockchain variables
-* code for initialisation of server
+1. [global blockchain variables](https://github.com/abhimanyusethia12/IITK_Bucks/blob/master/README.md#global-blockchain-variables)
+2. [endpoints of server](https://github.com/abhimanyusethia12/IITK_Bucks/blob/master/README.md#endpoints-of-the-node--server) 
+3. [definition of various functions](https://github.com/abhimanyusethia12/IITK_Bucks/blob/master/README.md#functions) 
+4. code for initialisation of server
 
-It inherits the classes from [`classes.py`](./classes.py).
+All classes are defined in [`classes.py`](./classes.py) and are inherited by [`app.py`](./app.py). [More Details on Classes](https://github.com/abhimanyusethia12/IITK_Bucks/blob/master/README.md#classes)
 
-[`user_interface_IITKBucks.py`](./user_interface_IITKBucks.py) consists of the script for terminal-based user-interface of the node. 
+[`user_interface_IITKBucks.py`](./user_interface_IITKBucks.py) is a CLI (Command Line Interface) for the user to interact with my node. 
+
+(You may read each of the above sections in detail sequentially or jump to any specific section you want to read by clicking on the relevant link above)
 
 ## User Interface 
 The user is allowed to perform the following actions by running the [`user_interface_IITKBucks.py`](./user_interface_IITKBucks.py) script-
