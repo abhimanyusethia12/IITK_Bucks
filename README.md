@@ -30,6 +30,8 @@ This Project was developed for the [Programming Club, IIT Kanpur](https://pclub.
 3. Deployment phase- One node of the project had been deployed on https://iitkbucks.pclub.in from 13th July 2020 till 26th July 2020. Through trying to communicate with that node, I found and eliminated the bugs in my applications. 
 
 # Technical Details
+[`user_interface_IITKBucks.py`](./user_interface_IITKBucks.py) is a CLI (Command Line Interface) for the user to interact with my node. 
+
 The entire server code for the node is written in [`app.py`](./app.py). It consists of- 
 1. [global blockchain variables](https://github.com/abhimanyusethia12/IITK_Bucks/blob/master/README.md#global-blockchain-variables)
 2. [endpoints of server](https://github.com/abhimanyusethia12/IITK_Bucks/blob/master/README.md#endpoints-of-the-node--server) 
@@ -38,11 +40,9 @@ The entire server code for the node is written in [`app.py`](./app.py). It consi
 
 All classes are defined in [`classes.py`](./classes.py) and are inherited by [`app.py`](./app.py). [More Details on Classes](https://github.com/abhimanyusethia12/IITK_Bucks/blob/master/README.md#classes)
 
-[`user_interface_IITKBucks.py`](./user_interface_IITKBucks.py) is a CLI (Command Line Interface) for the user to interact with my node. 
-
 (You may read each of the above sections in detail sequentially or jump to any specific section you want to read by clicking on the relevant link above)
 
-## User Interface 
+## Command Line Interface 
 The user is allowed to perform the following actions by running the [`user_interface_IITKBucks.py`](./user_interface_IITKBucks.py) script-
 
 1. Check Balance - allows user to check balance for any public key or alias
